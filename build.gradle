@@ -24,7 +24,13 @@ repositories {
     mavenCentral()
 }
 
+// gradle version 5.x 이상부터는 lombok 의존성 추가 방식이 바뀌었다.
+// 책에는 compile(~) 과 같이 의존성을 추가해줬지만, 아래와 같은 방식으로 의존성을 추가해주어야 한다.
 dependencies {
+    compileOnly 'org.projectlombok:lombok'
+    annotationProcessor 'org.projectlombok:lombok'
+
     compile('org.springframework.boot:spring-boot-starter-web')
+
     testCompile('org.springframework.boot:spring-boot-starter-test')
 }

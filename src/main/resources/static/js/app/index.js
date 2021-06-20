@@ -7,7 +7,7 @@ const main = {
 
         $('#btn-update').on('click', function () {
             _this.update();
-        });a
+        });
 
         $('#btn-delete').on('click', function () {
             _this.delete();
